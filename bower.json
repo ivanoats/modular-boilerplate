@@ -1,0 +1,31 @@
+{
+  "name": "tweet-monitor",
+  "version": "0.0.1",
+  "authors": [
+    "Ivan Storck <ivanoats@gmail.com>"
+  ],
+  "description": "Modular boilderplate for front end apps with simple, extensible express server and karma tests",
+  "main": "server.js",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "twitter"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/ivanoats/modular-boilerplate",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "lodash": "~2.4.1",
+    "bootstrap-sass-official": "~3.3.1"
+  }
+}
