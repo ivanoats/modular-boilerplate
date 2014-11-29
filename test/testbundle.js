@@ -16367,7 +16367,7 @@ describe('Home Page', function() {
       console.log('in test: jQuery is loaded')
     }
     expect(app.foo).toMatch(/bar/);
-    expect(window.$).toBeDefined();
+    expect(window._).toBeDefined();
   });
 });
 
