@@ -5,7 +5,7 @@ var app = express();
 var port = process.env.PORT || 3000;
 
 var staticDir = __dirname;
-staticDir += process.env.NODE_ENV === 'production' ? '/dist' : '/build'
+staticDir += process.env.NODE_ENV === 'production' ? '/dist' : '/build';
 app.use(express.static(staticDir));
 
 var server = app.listen(port, function () {

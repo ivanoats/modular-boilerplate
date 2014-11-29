@@ -12,7 +12,7 @@
     "equal"      : false
   },
   "browser": true,
-  "jquery"; true,
+  "jquery": true,
   "node": true,
   "indent": 2,
   "globalstrict" : true,
