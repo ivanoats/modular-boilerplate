@@ -99,7 +99,7 @@ module.exports = function(grunt) {
           compass: false
         },
         files: {
-          'build/css/style.css':'<%= project.css %>'
+          'build/css/style.css':'<%= project.scss %>'
         }
       }
     },
