@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-express-server');
   grunt.loadNpmTasks('grunt-jscs');
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
       app: ['app'],
       scss: ['<%= project.app %>/sass/style.scss'],
       css: ['<%= project.app %>/css/**/*.css'],
-      alljs: ['<%= project.app %>/js/**/*.js']
+      alljs: ['<%= project.app %>/js/**/*.jsx']
     },
 
     wiredep: {
@@ -65,7 +65,7 @@ module.exports = function(grunt) {
     browserify: {
       dev: {
         options: {
-          transform: ['debowerify'],
+          transform: [ [ 'reactify', {harmony: true} ], 'debowerify'],
           debug: true
         },
         src: ['<%= project.alljs %>'],
@@ -99,7 +99,7 @@ module.exports = function(grunt) {
           compass: false
         },
         files: {
-          'build/css/style.css':'<%= project.css %>'
+          'build/css/style.css':'<%= project.scss %>'
         }
       }
     },
@@ -134,8 +134,8 @@ module.exports = function(grunt) {
         tasks: ['sass:dev']
       },
       express: {
-        files:  [ 'server.js' ],
-        tasks:  [ 'express:dev' ],
+        files:  [ 'server.js', 'app/index.html' ],
+        tasks:  [ 'build', 'express:dev' ],
         options: {
           spawn: false
         }

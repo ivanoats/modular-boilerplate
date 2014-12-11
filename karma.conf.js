@@ -41,7 +41,7 @@ module.exports = function(config) {
 
     browserify: {
       debug: true,
-      transform: [ 'debowerify' ]
+      transform: [ ['reactify', {harmony: true} ], 'debowerify' ]
     },
 
 
