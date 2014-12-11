@@ -11,8 +11,12 @@
     "url": "https://github.com/ivanoats/modular-boilerplate"
   },
   "keywords": [
-    "twitter",
-    "monitor"
+    "modular",
+    "boilerplate",
+    "grunt",
+    "browserify",
+    "bower",
+    "karma"
   ],
   "author": "Ivan Storck",
   "license": "MIT",
@@ -21,7 +25,8 @@
   },
   "homepage": "https://github.com/ivanoats/modular-boilerplate",
   "dependencies": {
-    "express": "^4.10.4"
+    "express": "^4.10.4",
+    "lodash": "^2.4.1"
   },
   "devDependencies": {
     "bower": "^1.3.12",

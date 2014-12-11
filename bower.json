@@ -25,7 +25,7 @@
   ],
   "dependencies": {
     "jquery": "~2.1.1",
-    "lodash": "~2.4.1",
+
     "bootstrap-sass-official": "~3.3.1"
   }
 }

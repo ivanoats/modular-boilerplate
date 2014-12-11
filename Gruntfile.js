@@ -70,14 +70,6 @@ module.exports = function(grunt) {
         },
         src: ['<%= project.alljs %>'],
         dest: 'build/js/app.js'
-      },
-      frontEndTest: {
-        options: {
-          transform: ['debowerify'],
-          debug: true
-        },
-        src: ['test/front-end/**/*test.js'],
-        dest: 'test/testbundle.js'
       }
     },
 
@@ -152,7 +144,7 @@ module.exports = function(grunt) {
   }); //end initConfig
 
   grunt.registerTask('build', ['clean:dev', 'sass:dev', 'browserify:dev', 'copy:dev']);
-  grunt.registerTask('test', ['build:dev', 'browserify:frontEndTest','karma:unit']);
+  grunt.registerTask('test', ['build:dev', 'karma:continuous']);
   grunt.registerTask('default', ['test','watch']);
   grunt.registerTask('serve', [ 'build:dev', 'express:dev', 'watch' ]);
 
